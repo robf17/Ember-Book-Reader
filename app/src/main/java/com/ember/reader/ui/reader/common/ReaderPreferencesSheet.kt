@@ -276,7 +276,7 @@ fun ReaderPreferencesContent(
         if (isPdf) {
             SectionLabel("Page Fit")
             FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 com.ember.reader.core.model.PdfFitMode.entries.forEach { mode ->
                     FilterChip(
@@ -312,7 +312,7 @@ fun ReaderPreferencesContent(
         if (!isPdf) {
             SectionLabel(stringResource(R.string.font_section))
             FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 FontFamily.entries.forEach { font ->
                     FilterChip(
@@ -491,7 +491,7 @@ fun ReaderPreferencesContent(
         FlowRow(
             horizontalArrangement = Arrangement.spacedBy(12.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
-            modifier = Modifier.padding(vertical = 8.dp)
+            modifier = Modifier.padding(vertical = 8.dp),
         ) {
             ReaderTheme.entries.forEach { theme ->
                 val bgColor = if (theme == ReaderTheme.SYSTEM) {
